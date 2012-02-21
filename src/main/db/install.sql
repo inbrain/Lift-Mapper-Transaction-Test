@@ -1,4 +1,4 @@
-drop database test_transaction;
+drop database if exists test_transaction;
 create database test_transaction;
 use test_transaction;
 
