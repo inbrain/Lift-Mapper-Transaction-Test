@@ -14,10 +14,13 @@ object TestRest extends RestHelper with Loggable {
   serve {
     "test" :: "transaction" :: Nil prefix {
       case Get(_, _) =>
-        User.create.name("user").save()
-        interruptExecution()
-        Contact.create.name("contact").save()
-        OkResponse()
+      DB.use(DefaultConnectionIdentifier) {
+        connection =>
+          User.create.name("user").save()
+          interruptExecution()
+          Contact.create.name("contact").save()
+          OkResponse()
+      }
     }
   }
 
