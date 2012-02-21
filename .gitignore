@@ -1,0 +1,22 @@
+# Idea project files
+.idea
+*.iml
+*.ipr
+*.iws
+
+mysql-connector-java-5.1.16-bin.jar
+target
+logs
+.props
+
+# Eclipse project files
+.classpath
+.externalToolBuilders/
+.project
+.scala_dependencies
+
+# test db files
+test.default.h2.db
+test.default.trace.db
+
+
