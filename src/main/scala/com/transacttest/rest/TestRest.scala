@@ -4,6 +4,7 @@ import net.liftweb.http.OkResponse
 import net.liftweb.http.rest.RestHelper
 import net.liftweb.common.Loggable
 import com.transacttest.model.{Contact, User}
+import net.liftweb.db.{DefaultConnectionIdentifier, DB}
 
 /**
  */
@@ -12,7 +13,7 @@ object TestRest extends RestHelper with Loggable {
 
   serve {
     "test" :: "transaction" :: Nil prefix {
-      case JsonGet(_, _) =>
+      case Get(_, _) =>
         User.create.name("user").save()
         interruptExecution()
         Contact.create.name("contact").save()
