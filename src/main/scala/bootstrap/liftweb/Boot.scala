@@ -33,6 +33,6 @@ class Boot extends Loggable{
       LiftRules.dispatch.append(service)
     })
 
-    S.addAround(DB.buildLoanWrapper())
+//    S.addAround(DB.buildLoanWrapper())
   }
 }
