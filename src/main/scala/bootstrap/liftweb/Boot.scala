@@ -4,10 +4,9 @@ import net.liftweb._
 import util._
 import net.liftweb.common._
 import net.liftweb.http._
-import net.liftweb.http.provider._
 import mapper.{DB, DefaultConnectionIdentifier, StandardDBVendor}
 import com.transacttest.rest.TestRest
-import com.transacttest.rest.TestRest
+import com.transacttest.schema.Schema
 
 /**
  * A class that's instantiated early and run.  It allows the application
@@ -34,5 +33,7 @@ class Boot extends Loggable{
     })
 
     S.addAround(DB.buildLoanWrapper())
+
+    Schema.create()
   }
 }
