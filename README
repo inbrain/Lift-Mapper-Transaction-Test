@@ -1,0 +1,8 @@
+Main classes of interest are TestRest & Boot (they are a bit different among master & other branches)
+Test scenario:
+1. Deploy sample app
+2. in browser try access /test/get (relative to your deployment context)- you should see 'Created. Users: 0, Contacts: 0'
+3. then try access /test/transaction - you'll get exception message which is expected 
+4. access /test/get again - this time you'll see 'Created. Users: 1, Contacts: 0' - while expected output should be the same as in step 2
+
+Test scenario and its outcome is the same for both master & BothLoanWrapperAndDbUse branches, while on DbUseInPlace it behaves as expected (but on this branch buildLoanWrapper is commented in Boot) 
