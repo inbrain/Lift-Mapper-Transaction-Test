@@ -34,6 +34,7 @@ class Boot extends Loggable{
 
     S.addAround(DB.buildLoanWrapper())
 
+    Schema.destroy()
     Schema.create()
   }
 }
