@@ -6,12 +6,6 @@
     <version>1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Transaction Test Project</name>
-    <repositories>
-        <repository>
-            <id>thenewmotion-nexus</id>
-            <url>http://build.thenewmotion.com/nexus/content/groups/public</url>
-        </repository>
-    </repositories>
     <properties>
         <scala.version>2.9.1</scala.version>
         <lift.version>2.4</lift.version>
